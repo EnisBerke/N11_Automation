@@ -30,7 +30,7 @@ public class N11Test extends BaseTest {
 
         WebElement resultText = resultPageAlternative.getResultTextLocator();
         softAssert.assertTrue(resultText.isDisplayed());
-        resultPageAlternative.clickProductNameLocator();
+        resultPageAlternative.clickToProduct(3);
 
     }
 
