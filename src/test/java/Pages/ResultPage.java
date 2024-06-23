@@ -1,10 +1,11 @@
+package Pages;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class ResultPage {
-    private final WebDriver driver;
+public class ResultPage extends BasePage {
 
     private final By resultTextLocator = By.className("resultText");
 
@@ -29,7 +30,7 @@ public class ResultPage {
     private final By productNameLocator = By.className("productName");
 
     public ResultPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public WebElement getResultTextLocator() {

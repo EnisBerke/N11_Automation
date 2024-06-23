@@ -1,9 +1,13 @@
-import org.openqa.selenium.WebDriver;
+package Tests;
+
+import Pages.ProductDetailPage;
+import Pages.ResultPage;
+import Pages.ResultPageAlternative;
+import Pages.TabBarPage;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-public class N11Test extends BaseTest{
+public class N11Test extends BaseTest {
 
     TabBarPage tabBarPage;
 
@@ -15,10 +19,8 @@ public class N11Test extends BaseTest{
 
     @Test(priority = 1)
     public void searchTest() {
-        driver.get("https://www.n11.com/");
-
         tabBarPage = new TabBarPage(driver);
-
+        tabBarPage.navigateTo("https://www.n11.com/");
         tabBarPage.setSearchBar("Mac Book");
     }
 
